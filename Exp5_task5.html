@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exp5_task5_array_second_largest</title>
+</head>
+<body>
+    <h3>Write a program to find the second largest element of an array without sorting it</h3>
+    <h3>arr=[10,5,20,8,12]</h3>
+    <script>
+        const arr = [10, 5, 20, 8, 12];
+let largest = -Infinity;
+let secondLargest = -Infinity;
+
+for (let num of arr) {
+    if (num > largest) {
+        secondLargest = largest;
+        largest = num;
+    } else if (num > secondLargest && num !== largest) {
+        secondLargest = num;
+    }
+}
+
+console.log("Second Largest:", secondLargest);
+
+    </script>
+</body>
+</html>
