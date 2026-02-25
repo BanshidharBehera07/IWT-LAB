@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exp5_task3_palindrome</title>
+</head>
+<body>
+    <script>
+        let originalNum = 121;
+let num = originalNum;
+let reversedNum = 0;
+
+while (num > 0) {
+    let lastDigit = num % 10;
+    reversedNum = (reversedNum * 10) + lastDigit;
+    num = Math.floor(num / 10);
+}
+
+if (originalNum === reversedNum) {
+    console.log(`${originalNum} is a palindrome.`);
+} else {
+    console.log(`${originalNum} is not a palindrome.`);
+}
+
+    </script>
+</body>
+</html>
