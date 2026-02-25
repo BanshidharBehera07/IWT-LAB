@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exp5_task5_array_operation</title>
+</head>
+<body>
+    <script>
+        var arr= new Array(20,30,1,10,2,3,5)
+            var sum=0
+            var max=arr[0] 
+            var min=arr[0]
+            for(i=0;i<7;i++){
+                sum+=arr[i];
+            }
+            for(i=0;i<7;i++){
+                if(arr[i]>max){
+                    max=arr[i]
+                }
+            }
+            for(i=0;i<7;i++){
+                if(arr[i]<min){
+                    min=arr[i]
+                }
+            }
+            document.write("Sum of elements: "+sum)
+            document.write("avg of elements: "+sum/7)
+            document.write("Largest Element: "+max)
+            document.write("Largest Element: "+min)
+    </script>
+</body>
+</html>
