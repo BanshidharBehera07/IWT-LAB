@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Question 10 - Even/Odd Splitter</title>
+</head>
+<body>
+    <h1>Even and Odd Splitter</h1>
+    <p>Enter numbers (separated by commas): <input type="text" id="arrInput"> <button onclick="process()">Split</button></p>
+    <div id="results"></div>
+
+    <script>
+        function process() {
+            let rawInput = document.getElementById("arrInput").value;
+            let numArr = rawInput.split(',').map(n => parseInt(n.trim()));
+            
+            let evens = [];
+            let odds = [];
+
+            for (let n of numArr) {
+                if (n % 2 === 0) evens.push(n);
+                else odds.push(n);
+            }
+
+            document.getElementById("results").innerHTML = 
+                "<p>Even: [" + evens.join(', ') + "]</p>" +
+                "<p>Odd: [" + odds.join(', ') + "]</p>";
+        }
+    </script>
+</body>
+</html>

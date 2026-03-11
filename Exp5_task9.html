@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Question 9 - checkedwether the number is an Armstrong number or not.</title>
+</head>
+<body>
+  
+<script>
+function isArmstrong(num) {
+    let digits = num.toString().split('');
+    let power = digits.length;
+    let sum = 0;
+
+    for (let d of digits) {
+        sum += Math.pow(parseInt(d), power);
+    }
+    return sum === num;
+}
+let numberToCheck = 123;
+let result = isArmstrong(numberToCheck);
+document.write("<p>The number <b>" + numberToCheck + "</b> is an Armstrong number: <b>" + result + "</b></p>");
+    </script>
+</body>
+</html>

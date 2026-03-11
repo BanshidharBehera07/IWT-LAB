@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count elements of an array</title>
+</head>
+<body>
+    <h2>Write a program to count how many times each element occurs in an array.</h2>
+    <h3>arr=[1,2,2,4,2,4,3,5]</h3>
+    <script>
+        const elements = [1,2,2,4,2,4,3,5];
+        const count = elements.reduce((acc, curr) => {
+        acc[curr] = (acc[curr] || 0) + 1;
+         return acc;
+    }, {});
+
+console.log(count); 
+    </script>
+</body>
+</html>
