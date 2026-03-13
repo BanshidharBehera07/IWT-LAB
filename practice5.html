@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+    </ul>
+    <script>
+        const items=document.getElementsByTagName("li");
+        for(let i=0; i<itmes.length; i++){
+            document.writeln(items[i].innerHTML);
+        }
+    </script>
+    <p>Original Text</p>
+    <p>Another paragraph</p>
+    <script>
+        document.getElementsByTagName("p")[1].innerHTML="Hello World!";
+    </script>
+</body>
+</html>

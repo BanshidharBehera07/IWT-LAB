@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add()
+        {
+            var a=document.getElementById("a").value;
+            var b=document.getElementById("b").value;
+            let c=parseInt(a)+parseInt(b);
+            document.writeln("The addition of two number is ",c)
+        }
+    </script>
+</head>
+<body>
+    Num1<input type="number" placeholder="Enter 1st number" id="a">
+    Num2<input type="number" placeholder="Enter 2nd number" id="b"> 
+    <input type="button" value="Add" onclick="add()">
+</body>
+</html>
