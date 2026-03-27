@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Task 1</title>
+    <style>
+        body {
+            font-family: 'JetBrains Mono', sans-serif; 
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="main-heading">Hello World</h2>
+    <button id="change-btn">Click Me!</button>
+    <script>
+        const heading = document.getElementById('main-heading');
+        const button = document.getElementById('change-btn');
+        button.addEventListener('click', function() {
+            heading.textContent = "Welcome to DOM Manipulation";
+            console.log("Heading text has been changed!");
+        });
+    </script>
+</body>
+</html>

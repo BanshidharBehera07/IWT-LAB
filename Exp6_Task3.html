@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Task 3: Color Changer</title>
+    <style>
+        body {
+            font-family: 'JetBrains Mono', sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        #color-box {
+            width: 300px;
+            height: 150px;
+            margin: 20px auto;
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: background-color 0.3s ease; /* Makes the transition smooth */
+            background-color: #ffffff;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .btn-red { background-color: #ffcccc; }
+        .btn-green { background-color: #ccffcc; }
+        .btn-blue { background-color: #ccccff; }
+    </style>
+</head>
+<body>
+    <h2>Change the Box Color</h2>
+    <div id="color-box">I change color!</div>
+    <button class="btn-red" onclick="changeColor('red')">Red</button>
+    <button class="btn-green" onclick="changeColor('green')">Green</button>
+    <button class="btn-blue" onclick="changeColor('blue')">Blue</button>
+
+    <script>
+        const colorBox = document.getElementById('color-box');
+        function changeColor(newColor) {
+            const userConfirmed = confirm("Are you sure you want to change the color to " + newColor + "?");
+            if (userConfirmed) {
+                colorBox.style.backgroundColor = newColor;
+                colorBox.textContent = "Now I am " + newColor.toUpperCase() + "!";
+            } else {
+                console.log("Color change cancelled by user.");
+            }
+        }
+    </script>
+</body>
+</html>

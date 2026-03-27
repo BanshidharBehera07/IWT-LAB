@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prime Checker</title>
+</head>
+<body>
+    <form id="primeChecker">
+        <input type="number" id="num" placeholder="Enter a number" required>
+        <button type="submit">Is it Prime?</button>
+    </form>
+
+    <script>
+        document.getElementById('primeChecker').onsubmit = function(e) {
+            e.preventDefault();
+            const n = parseInt(document.getElementById('num').value);
+            
+            if (n < 2) return alert(n + " is NOT prime.");          
+            let isPrime = true;
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            alert(isPrime ? n + " is prime!" : n + " is NOT prime.");
+        };
+    </script>
+</body>
+</html>

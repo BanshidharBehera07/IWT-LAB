@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Task 2: Toggle Visibility</title>
+    <style>
+        body {
+            font-family: 'JetBrains Mono', sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <p id="info-text">This is a secret message! Click the button to hide me.</p>
+    <button id="toggle-btn">Hide Text</button>
+    <script>
+        const text = document.getElementById('info-text');
+        const btn = document.getElementById('toggle-btn');
+        btn.addEventListener('click', function() {
+            if (text.style.display === "none") {
+                text.style.display = "block";
+                btn.textContent = "Hide Text";
+            } else {
+                text.style.display = "none";
+                btn.textContent = "Show Text";
+            }
+        });
+    </script>
+</body>
+</html>
